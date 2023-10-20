@@ -22,7 +22,7 @@ export async function pingTelegramOnPullRequest({
   sendMessage.push(`🔥 New Pull Request Alert! 🔥`);
   sendMessage.push(`Project: ${pull_request?.base?.repo.name}`);
   sendMessage.push(`Title: ${pull_request?.title}`);
-  sendMessage.push(`Author: ${pull_request?.user.login}`);
+  sendMessage.push(`Author: @${pull_request?.user.login}`);
   let reviewers = "Reviewers: ";
 
   for (const reviewer of pull_request.requested_reviewers) {
